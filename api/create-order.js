@@ -1,65 +1,44 @@
-// api/create-order.js
-
 import Razorpay from "razorpay";
 
 const razorpay = new Razorpay({
-
   key_id: process.env.RAZORPAY_KEY_ID,
-
   key_secret: process.env.RAZORPAY_KEY_SECRET
-
 });
 
-export default async function handler(req,res){
+export default async function handler(req, res) {
 
-if(req.method!=="POST"){
+  if (req.method !== "POST") {
+    return res.status(405).json({
+      success: false,
+      message: "Method Not Allowed"
+    });
+  }
 
-return res.status(405).json({
+  try {
 
-success:false,
+    const { amount } = req.body || {};
 
-message:"Method Not Allowed"
+    const order = await razorpay.orders.create({
+      amount: amount || 1500,
+      currency: "INR",
+      receipt: `JPW_${Date.now()}`,
+      notes: {
+        service: "JPW Reach",
+        company: "AINEX SERVICES"
+      }
+    });
 
-});
+    return res.status(200).json(order);
 
-}
+  } catch (err) {
 
-try{
+    console.error(err);
 
-const {amount}=req.body;
+    return res.status(500).json({
+      success: false,
+      message: err.message || "Order Creation Failed"
+    });
 
-const order=await razorpay.orders.create({
-
-amount:amount||1500,
-
-currency:"INR",
-
-receipt:"JPW_"+Date.now(),
-
-payment_capture:true,
-
-notes:{
-
-service:"JPW Reach",
-
-company:"AINEX SERVICES"
-
-}
-
-});
-
-return res.status(200).json(order);
-
-}catch(err){
-
-return res.status(500).json({
-
-success:false,
-
-message:"Order Creation Failed"
-
-});
-
-}
+  }
 
 }
