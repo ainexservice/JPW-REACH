@@ -5,610 +5,496 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
 
-<title>Jio Partner Work | AINEX SERVICES</title>
+<title>AINEX JPW PRO</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
-<style>
+<link rel="stylesheet"
+href="style.css">
 
-/* ===== PART 2 CSS ===== */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#0052D4,#00B4FF);
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
-.container{
-width:100%;
-max-width:520px;
-}
-
-.card{
-background:#fff;
-border-radius:28px;
-overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,.25);
-animation:popup .5s ease;
-}
-
-@keyframes popup{
-0%{
-opacity:0;
-transform:translateY(30px) scale(.95);
-}
-100%{
-opacity:1;
-transform:translateY(0) scale(1);
-}
-}
-
-.header{
-background:linear-gradient(135deg,#0048ff,#00a8ff);
-padding:35px 25px;
-text-align:center;
-color:#fff;
-}
-
-.logo{
-width:90px;
-height:90px;
-margin:auto;
-margin-bottom:15px;
-background:#fff;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:42px;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.header h1{
-font-size:30px;
-font-weight:700;
-}
-
-.header p{
-margin-top:8px;
-font-size:15px;
-}
-
-.provider{
-margin-top:18px;
-background:rgba(255,255,255,.15);
-padding:12px;
-border-radius:12px;
-}
-
-.provider b{
-display:block;
-margin-top:5px;
-font-size:18px;
-}
-
-.priceCard{
-margin:20px;
-padding:20px;
-background:#eef8ff;
-border:2px dashed #0d7cff;
-border-radius:18px;
-text-align:center;
-}
-
-.priceCard span{
-color:#666;
-}
-
-.priceCard h2{
-font-size:50px;
-margin-top:8px;
-color:#16a34a;
-}
-
-.paymentCard{
-margin:20px;
-padding:22px;
-background:#fafafa;
-border-radius:22px;
-text-align:center;
-border:1px solid #ececec;
-}
-
-.paymentCard h2{
-font-size:24px;
-margin-bottom:10px;
-}
-
-.subText{
-font-size:14px;
-color:#666;
-margin-bottom:18px;
-}
-
-.qr{
-width:300px;
-max-width:100%;
-border-radius:18px;
-border:5px solid #fff;
-box-shadow:0 10px 25px rgba(0,0,0,.18);
-}
-
-.payBtn{
-display:block;
-margin-top:20px;
-padding:17px;
-background:#ff7300;
-color:#fff;
-text-decoration:none;
-font-size:18px;
-font-weight:700;
-border-radius:14px;
-transition:.3s;
-}
-
-.payBtn:hover{
-background:#e35f00;
-transform:scale(1.02);
-}
-
-.note{
-margin-top:18px;
-padding:12px;
-background:#fff7df;
-border-left:5px solid #ff9800;
-border-radius:10px;
-font-size:14px;
-line-height:1.6;
-}
-
-.formCard{
-padding:0 20px 20px;
-}
-
-.formCard h2{
-margin-bottom:15px;
-}
-
-.formCard input{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:12px;
-font-size:16px;
-transition:.3s;
-}
-
-.formCard input:focus{
-outline:none;
-border-color:#0052D4;
-box-shadow:0 0 10px rgba(0,82,212,.2);
-}
-
-.check{
-display:flex;
-align-items:center;
-gap:10px;
-margin-bottom:20px;
-font-size:15px;
-font-weight:500;
-}
-
-.check input{
-width:18px;
-height:18px;
-}
-
-#submitBtn{
-width:100%;
-padding:17px;
-background:#25D366;
-color:#fff;
-border:none;
-border-radius:14px;
-font-size:18px;
-font-weight:700;
-cursor:pointer;
-transition:.3s;
-}
-
-#submitBtn:hover{
-background:#18b957;
-transform:scale(1.02);
-}
-
-#submitBtn:disabled{
-background:#888;
-cursor:not-allowed;
-}
-
-.featureCard{
-margin:20px;
-padding:20px;
-background:#f8fbff;
-border-radius:20px;
-}
-
-.featureCard h2{
-text-align:center;
-margin-bottom:20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-}
-
-.box{
-background:#fff;
-padding:20px;
-border-radius:16px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-font-size:28px;
-}
-
-.box p{
-margin-top:10px;
-font-size:14px;
-font-weight:600;
-}
-
-.supportBtn{
-display:block;
-margin:20px;
-padding:16px;
-background:#128C7E;
-color:#fff;
-text-decoration:none;
-text-align:center;
-font-size:17px;
-font-weight:700;
-border-radius:14px;
-transition:.3s;
-}
-
-.supportBtn:hover{
-background:#0d6d62;
-}
-
-.footer{
-background:#f5f5f5;
-padding:25px;
-text-align:center;
-}
-
-.footer h3{
-color:#0052D4;
-font-size:22px;
-margin-bottom:8px;
-}
-
-.footer p{
-margin-top:6px;
-color:#666;
-font-size:14px;
-}
-
-@media(max-width:500px){
-
-body{
-padding:12px;
-}
-
-.header h1{
-font-size:24px;
-}
-
-.priceCard h2{
-font-size:42px;
-}
-
-.qr{
-width:240px;
-}
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-</style>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="bgCircle1"></div>
+<div class="bgCircle2"></div>
 
-<div class="card">
+<div class="wrapper">
 
-<!-- Header -->
+<!-- TOP SLIDER -->
 
-<div class="header">
+<div class="topSlider">
 
-<div class="logo">🏢</div>
+<div class="marquee">
 
-<h1>Jio Partner Work</h1>
+<span>
 
-<p>Building ID Reach Service</p>
+🔥 Welcome To AINEX SERVICES • First Complete ₹15 Payment • Then Enter JPW ID • Then Enter Password • Click Submit • Fast Service • Secure Payment • Trusted Platform • Welcome To AINEX SERVICES •
 
-<div class="provider">
-
-Provided By
-
-<b>AINEX SERVICES</b>
+</span>
 
 </div>
 
 </div>
 
-<!-- Price -->
+<!-- HEADER -->
 
-<div class="priceCard">
+<header>
 
-<span>Per Work Order</span>
+<div class="brand">
 
-<h2>₹15</h2>
+<div class="logo">
+
+🏢
 
 </div>
 
-<!-- Payment -->
+<div>
 
-<div class="paymentCard">
+<h1>
 
-<h2>💳 Complete Payment First</h2>
+AINEX SERVICES
 
-<p class="subText">
+</h1>
 
-Scan QR Code or Click Pay Button
+<p>
+
+Jio Partner Work
 
 </p>
 
-<img
-src="qr.jpg"
-class="qr"
-alt="QR Code">
+</div>
 
-<a
-class="payBtn"
-href="upi://pay?pa=BHARATPE2D0X0G6V8M36892@unitype&pn=AINEX%20SERVICES&am=15&cu=INR"
-target="_blank">
+</div>
 
-💳 Pay ₹15
+<div class="secureTag">
 
-</a>
+<span></span>
 
-<div class="note">
+Secure
 
-After successful payment, fill the details below.
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="heroCard">
+
+<div class="heroIcon">
+
+🚀
+
+</div>
+
+<h2>
+
+Building ID Reach
+
+</h2>
+
+<p>
+
+Fast • Secure • Trusted
+
+</p>
+
+<div class="priceBox">
+
+₹15
+
+<span>
+
+Per Work Order
+
+</span>
+
+</div>
+
+<button
+id="payBtn">
+
+💳 Pay Now
+
+</button>
+
+<div
+class="paymentText">
+
+Supports
+
+UPI • Cards • Wallet • NetBanking
 
 </div>
 
 </div>
 
-<!-- Form -->
+</section>
 
-<div class="formCard">
+<!-- STEP -->
 
-<h2>Submit Details</h2>
+<section
+class="steps">
+
+<div
+class="step active">
+
+<div
+class="circle">
+
+1
+
+</div>
+
+<p>
+
+Pay
+
+</p>
+
+</div>
+
+<div
+class="stepLine"></div>
+
+<div
+class="step">
+
+<div
+class="circle">
+
+2
+
+</div>
+
+<p>
+
+Verify
+
+</p>
+
+</div>
+
+<div
+class="stepLine"></div>
+
+<div
+class="step">
+
+<div
+class="circle">
+
+3
+
+</div>
+
+<p>
+
+Submit
+
+</p>
+
+</div>
+
+</section>
+
+<!-- STATUS -->
+
+<section
+class="statusCard"
+id="statusCard">
+
+<div
+class="statusIcon">
+
+🔒
+
+</div>
+
+<h3>
+
+Payment Pending
+
+</h3>
+
+<p>
+
+Complete payment to unlock the form.
+
+</p>
+
+</section>
+
+<!-- FEATURES -->
+
+<section
+class="featureWrap">
+
+<div
+class="feature">
+
+⚡
+
+<p>
+
+Fast
+
+</p>
+
+</div>
+
+<div
+class="feature">
+
+🛡️
+
+<p>
+
+Secure
+
+</p>
+
+</div>
+
+<div
+class="feature">
+
+💳
+
+<p>
+
+Payment
+
+</p>
+
+</div>
+
+<div
+class="feature">
+
+✅
+
+<p>
+
+Trusted
+
+</p>
+
+</div>
+
+</section>
+
+<!-- FORM -->
+
+<section
+class="formCard">
+
+<h2>
+
+Submit Details
+
+</h2>
+
+<form
+id="submitForm">
+
+<div
+class="inputGroup">
+
+<label>
+
+JPW ID
+
+</label>
 
 <input
-type="tel"
+type="number"
 id="jpwid"
-inputmode="numeric"
-pattern="[0-9]*"
-placeholder="JPW ID">
+placeholder="Enter JPW ID"
+disabled>
+
+</div>
+
+<div
+class="inputGroup">
+
+<label>
+
+Password
+
+</label>
 
 <input
 type="password"
 id="password"
-placeholder="Password">
+placeholder="Enter Password"
+disabled>
 
-<input
-type="text"
-id="utr"
-placeholder="UTR Number">
+</div>
 
-<label class="check">
+<div
+class="inputGroup">
 
-<input
-type="checkbox"
-id="paid">
+<label>
 
-I Have Completed Payment
+Payment ID
 
 </label>
 
-<button
-id="submitBtn"
-onclick="sendWA()">
+<input
+type="text"
+id="paymentid"
+readonly
+placeholder="Auto Generated">
 
-📤 Submit on WhatsApp
+</div>
+
+<button
+type="button"
+id="submitBtn"
+disabled>
+
+📤 Submit
 
 </button>
 
-</div>
+</form>
 
-<!-- Features -->
+</section>
 
-<div class="featureCard">
+<!-- INFO -->
 
-<h2>Why Choose Us?</h2>
+<section
+class="infoCard">
 
-<div class="grid">
+<div
+class="row">
 
-<div class="box">
+<span>
 
-⚡
+Amount
 
-<p>Fast Work</p>
+</span>
 
-</div>
+<b>
 
-<div class="box">
+₹15
 
-🛡️
-
-<p>Secure</p>
-
-</div>
-
-<div class="box">
-
-💬
-
-<p>Support</p>
+</b>
 
 </div>
 
-<div class="box">
+<div
+class="row">
 
-✅
+<span>
 
-<p>Trusted</p>
+Payment
+
+</span>
+
+<b>
+
+Razorpay
+
+</b>
 
 </div>
 
-</div>
+<div
+class="row">
+
+<span>
+
+Verification
+
+</span>
+
+<b>
+
+Automatic
+
+</b>
 
 </div>
+
+<div
+class="row">
+
+<span>
+
+Status
+
+</span>
+
+<b
+id="paymentStatus">
+
+Pending
+
+</b>
+
+</div>
+
+</section>
+
+<!-- SUPPORT -->
 
 <a
 href="https://wa.me/919236414171"
-class="supportBtn"
-target="_blank">
+target="_blank"
+class="supportBtn">
 
 💬 WhatsApp Support
 
 </a>
 
-<div class="footer">
+<!-- FOOTER -->
 
-<h3>AINEX SERVICES</h3>
+<footer>
 
-<p>Building ID Reach Service Provider</p>
+<h2>
 
-<p>© 2026 All Rights Reserved</p>
+AINEX SERVICES
 
-</div>
+</h2>
 
-</div>
+<p>
+
+Professional Digital Service Provider
+
+</p>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+</footer>
 
 </div>
 
 <script>
-
-/* ===== PART 3 JAVASCRIPT ===== */
-function sendWA() {
-  
-  const btn = document.getElementById("submitBtn");
-  
-  let jpwid = document.getElementById("jpwid").value.trim();
-  let password = document.getElementById("password").value.trim();
-  let utr = document.getElementById("utr").value.trim();
-  let paid = document.getElementById("paid").checked;
-  
-  if (jpwid == "") {
-    alert("Please Enter JPW ID");
-    document.getElementById("jpwid").focus();
-    return;
-  }
-  
-  if (!/^[0-9]+$/.test(jpwid)) {
-    alert("JPW ID should contain numbers only.");
-    document.getElementById("jpwid").focus();
-    return;
-  }
-  
-  if (password == "") {
-    alert("Please Enter Password");
-    document.getElementById("password").focus();
-    return;
-  }
-  
-  if (utr == "") {
-    alert("Please Enter UTR Number");
-    document.getElementById("utr").focus();
-    return;
-  }
-  
-  if (!paid) {
-    alert("Please confirm that payment is completed.");
-    return;
-  }
-  
-  btn.disabled = true;
-  btn.innerHTML = "⏳ Opening WhatsApp...";
-  
-  let message =
-    `*JPW* ${jpwid}
-
-*Pass* ${password}
-
-*UTR* ${utr}`;
-  
-  let url = "https://wa.me/919236414171?text=" + encodeURIComponent(message);
-  
-  window.location.href = url;
-  
-  setTimeout(function() {
-    
-    btn.disabled = false;
-    btn.innerHTML = "📤 Submit on WhatsApp";
-    
-  }, 2000);
-  
-}
-
-/* ENTER KEY SUPPORT */
-
-document.getElementById("jpwid").addEventListener("keydown", function(e) {
-  
-  if (e.key === "Enter") {
-    e.preventDefault();
-    document.getElementById("password").focus();
-  }
-  
-});
-
-document.getElementById("password").addEventListener("keydown", function(e) {
-  
-  if (e.key === "Enter") {
-    e.preventDefault();
-    document.getElementById("utr").focus();
-  }
-  
-});
-
-document.getElementById("utr").addEventListener("keydown", function(e) {
-  
-  if (e.key === "Enter") {
-    e.preventDefault();
-    sendWA();
-  }
-  
-});
-
+window.RAZORPAY_KEY="rzp_live_TDV22u0kDyxYgq";
 </script>
+
+<script src="script.js"></script>
 
 </body>
 
